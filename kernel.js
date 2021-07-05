@@ -58,7 +58,7 @@ const carbun = {
                   desc: 'mmm, this one is yummy.'
                },
                'Linkuage': {
-                  link: 'https://0utlandish.github.io/',
+                  link: 'https://0utlandish.github.io/linkuage',
                   desc: 'this is a very good project, please make sure to check it out !'
                }
             }
