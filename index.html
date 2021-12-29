@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <link rel="icon" type="image/png" href="./icon.png" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tic Tac Toe | Minimax Algorithm Based AI</title>
+   <style>
+      @import url('https://v1.fontapi.ir/css/Vazir:100;300;400');
+
+      body,
+      html {
+         direction: rtl;
+         position: relative;
+         overflow: hidden;
+         height: 100%;
+         padding: 0;
+         margin: 0;
+         font-family: 'Vazir', sans-serif;
+      }
+
+      .shadow {
+         z-index: -1;
+         position: fixed;
+         inset: 0;
+         transition-duration: 2s;
+         background-color: #0000;
+      }
+
+      canvas {
+         z-index: -2;
+         transition-duration: 2s;
+      }
+
+      canvas.blur {
+         filter: blur(2px);
+      }
+
+      .menu {
+         transition-duration: 2s;
+         transition-property: transform;
+         position: absolute;
+         right: 0;
+         top: 50%;
+         transform: translate(100%, -50%);
+      }
+
+      .menu.show {
+         transform: translate(-100%, -50%) !important;
+      }
+
+      .menu .title {
+         font-size: 3rem;
+         color: #fff;
+      }
+
+      .menu .title #winner {
+         position: relative;
+         top: 0.4rem;
+         color: #252525;
+         text-transform: capitalize;
+      }
+
+      .menu .restart {
+         margin-top: 1rem;
+         padding: 0.6rem 1rem;
+         font-size: 1.2rem;
+         background-color: #0D47A1dd;
+         color: #fff;
+         display: inline-block;
+         border-radius: 1rem;
+         transition-duration: .2s;
+      }
+
+      .menu .restart:hover {
+         cursor: pointer;
+         background-color: #0D47A1;
+      }
+
+      .author {
+         font-size: 1.2rem;
+         margin-top: 1.3rem;
+         color: #fefefe;
+      }
+
+      .author ion-icon {
+         position: relative;
+         top: 4px;
+      }
+
+      #aiStart {
+         position: absolute;
+         padding: 0.6rem 1rem;
+         background: #dfdfdf;
+         border: 0;
+         font-family: inherit;
+         bottom: -2px;
+         right: 50%;
+         transform: translate(50%);
+         transition: 1s transform;
+         border-radius: 0.7rem 0.7rem 0 0;
+      }
+      #aiStart.hide {
+         transform: translate(50%, 100%);
+      }
+      #aiStart:hover {
+         cursor: pointer;
+         background-color: #ccc;
+      }
+   </style>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+   <div class="shadow"></div>
+   <div class="menu">
+      <div class="title"></div>
+      <div class="restart">شروع دوباره</div>
+      <div class="author">
+         <ion-icon name="person-circle-outline"></ion-icon>
+         طراحی شده توسط کمیل طاهری لداری
+      </div>
+   </div>
+   <button id="aiStart">
+      حرکت اول با AI
+   </button>
+   <script type="module" src="./main.js"></script>
+</body>
+
+</html>
